@@ -1,2 +1,2 @@
 # greenlanders-poll
-staking
+staking web3 application
