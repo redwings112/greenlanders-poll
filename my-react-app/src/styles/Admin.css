@@ -1,0 +1,27 @@
+.admin-page {
+  font-family: "Inter", sans-serif;
+}
+
+.stat-card {
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.15);
+}
+
+.transaction-section table {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.transaction-section th, 
+.transaction-section td {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.transaction-section tr:last-child td {
+  border-bottom: none;
+}

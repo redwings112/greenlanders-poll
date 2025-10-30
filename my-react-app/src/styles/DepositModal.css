@@ -1,0 +1,155 @@
+.deposit-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+.deposit-modal {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 420px;
+  max-width: 90%;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  animation: slideUp 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.deposit-modal h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #00ffd5;
+  letter-spacing: 0.5px;
+}
+
+.deposit-modal p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.deposit-modal input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.deposit-modal input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px #00ffd5;
+}
+
+.deposit-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.deposit-btn,
+.cancel-btn {
+  width: 48%;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+  border: none;
+}
+
+.deposit-btn {
+  background: linear-gradient(135deg, #00ffd5, #00b3ff);
+  color: #000;
+}
+
+.deposit-btn:hover {
+  box-shadow: 0 0 10px #00ffd5, 0 0 20px #00b3ff;
+}
+
+.cancel-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.loading {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #00ffd5;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .deposit-modal {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .deposit-modal h2 {
+    font-size: 1.3rem;
+  }
+
+  .deposit-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .deposit-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}

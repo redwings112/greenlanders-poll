@@ -1,0 +1,77 @@
+.card {
+  background: #e0fff9;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 16px;
+  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.2);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+h2 {
+  color: #008b8b;
+  margin-bottom: 12px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #b2dfdb;
+}
+
+button {
+  background: #20b2aa;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #2e8b57;
+}
+
+.position-panel table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.position-panel th,
+.position-panel td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #b2dfdb;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 16px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #b2dfdb;
+  }
+}

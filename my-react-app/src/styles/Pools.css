@@ -1,0 +1,76 @@
+.pools-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, aquamarine, #e0fff4);
+  padding: 2rem;
+  color: #111;
+  font-family: "Orbitron", "Poppins", sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #004d40;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid black;
+  display: inline-block;
+}
+
+.pool-section {
+  margin-bottom: 3rem;
+}
+
+.pool-section h2 {
+  font-size: 1.5rem;
+  color: #00897b;
+  margin-bottom: 1rem;
+}
+
+.pool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.pool-card {
+  background: white;
+  border: 2px solid black;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.pool-card:hover {
+  transform: translateY(-6px);
+}
+
+.pool-card h3 {
+  font-size: 1.3rem;
+  color: #00796b;
+}
+
+.pool-card.ending {
+  border: 2px solid #ff6f00;
+}
+
+.stake-btn,
+.withdraw-btn {
+  background: aquamarine;
+  color: black;
+  border: 2px solid black;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.stake-btn:hover {
+  background: #64ffda;
+}
+
+.withdraw-btn:hover {
+  background: #ffcc80;
+}

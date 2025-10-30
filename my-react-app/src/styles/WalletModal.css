@@ -1,0 +1,99 @@
+.wallet-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  backdrop-filter: blur(4px);
+}
+
+.wallet-modal {
+  background: white;
+  border: 2px solid #008b8b;
+  border-radius: 20px;
+  padding: 24px;
+  width: 90%;
+  max-width: 380px;
+  box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.wallet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #004d4d;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #004d4d;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: #008b8b;
+}
+
+.wallet-text {
+  color: #333;
+  margin: 16px 0;
+  font-size: 15px;
+}
+
+.wallet-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wallet-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px solid #008b8b;
+  background: #e0fff9;
+  color: #004d4d;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.wallet-option:hover {
+  background: aquamarine;
+  transform: scale(1.03);
+}
+
+.wallet-connected {
+  text-align: center;
+  color: #004d4d;
+  font-weight: 500;
+}
+
+.wallet-connected h4 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.close-wallet-btn {
+  background: #004d4d;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-wallet-btn:hover {
+  background: #007777;
+}

@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;700&display=swap');
+
+:root {
+  --aqua: #7fffd4;
+  --dark: #0f172a;
+  --white: #ffffff;
+  --border: #000000;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, var(--dark), #001f1f);
+  padding: clamp(1rem, 4vw, 3rem);
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--aqua);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  text-align: center;
+  text-shadow: 1px 1px 2px var(--border);
+  margin-bottom: 2rem;
+}
+
+.pool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.pool-card {
+  background: rgba(127, 255, 212, 0.05);
+  border: 2px solid var(--aqua);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--white);
+  box-shadow: 0 4px 10px rgba(0, 255, 200, 0.2);
+  transition: all 0.3s ease;
+}
+
+.pool-card:hover {
+  background: rgba(127, 255, 212, 0.15);
+  transform: translateY(-4px);
+}
+
+.pool-card h2 {
+  font-family: 'Rajdhani', sans-serif;
+  color: var(--aqua);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  text-shadow: 1px 1px 1px var(--border);
+}
+
+.pool-stats {
+  font-family: 'Rajdhani', sans-serif;
+  border-top: 1px solid var(--aqua);
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+button {
+  background-color: var(--aqua);
+  color: var(--dark);
+  font-weight: 700;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  margin: 0.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+button:hover {
+  background-color: var(--white);
+  color: var(--dark);
+  transform: scale(1.05);
+}
+:root {
+  --aqua: #7fffd4;
+  --teal: #009688;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", "Poppins", sans-serif;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal {
+  background: var(--aqua);
+  border: 2px solid var(--black);
+  border-radius: 18px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  color: var(--black);
+  animation: slideUp 0.35s ease;
+}
+
+.modal h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 0 var(--white);
+}
+
+.modal input {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid var(--black);
+  border-radius: 12px;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 1rem;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.modal input:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 10px var(--teal);
+  outline: none;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.modal button {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: 2px solid var(--black);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-size: 1rem;
+}
+
+.modal button:first-child {
+  background: var(--black);
+  color: var(--white);
+}
+
+.modal button:first-child:hover {
+  background: var(--teal);
+}
+
+.modal button:last-child {
+  background: var(--white);
+  color: var(--black);
+}
+
+.modal button:last-child:hover {
+  background: #f3f3f3;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .modal {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .modal h2 {
+    font-size: 1.3rem;
+  }
+
+  .modal input,
+  .modal button {
+    font-size: 0.95rem;
+  }
+}
+/* === Pool Card Styles === */
+.pool-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: 16px;
+}
+
+.pool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.pool-card h2 {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.pool-stat {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* === Progress Bar === */
+.progress-bar {
+  background: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 10px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #007bff, #00c4ff);
+  transition: width 0.4s ease;
+}
+
+/* === Capacity === */
+.pool-capacity {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+/* === Buttons === */
+.pool-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pool-actions button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.pool-actions button:nth-child(2) {
+  background: #ff4d4d;
+}
+
+.pool-actions button:hover {
+  opacity: 0.85;
+  transform: scale(1.03);
+}
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #e0fff9, #ccf7ef);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.create-pool-section {
+  background: #d1fff2;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.15);
+  width: 100%;
+  max-width: 700px;
+}
+
+.create-pool-section h2 {
+  text-align: center;
+  color: #00796b;
+  margin-bottom: 15px;
+}
+
+.create-pool-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.create-pool-form input {
+  flex: 1 1 48%;
+  padding: 10px;
+  border: 1px solid #a7dcd4;
+  border-radius: 10px;
+}
+
+.create-pool-form button {
+  flex: 1 1 100%;
+  padding: 12px;
+  background: #20b2aa;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.create-pool-form button:hover {
+  background: #2e8b57;
+}
+
+.pool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.pool-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 128, 128, 0.15);
+  transition: transform 0.2s ease-in-out;
+}
+
+.pool-card:hover {
+  transform: scale(1.02);
+}
+
+.pool-actions button {
+  margin: 8px;
+  padding: 8px 14px;
+  background: #008b8b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pool-actions button:hover {
+  background: #2e8b57;
+}
+
+.timer {
+  color: #00796b;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .create-pool-form input {
+    flex: 1 1 100%;
+  }
+}
+.dashboard-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  background: linear-gradient(90deg, aquamarine, teal);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, teal, aquamarine);
+}
+
+.pool-card {
+  border: 1px solid #e1e1e1;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+

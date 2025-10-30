@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@600&display=swap');
+
+:root {
+  --aqua: #7fffd4;
+  --emerald: #2ecc71;
+  --teal: #14b8a6;
+  --white: #ffffff;
+  --dark: #0f172a;
+}
+
+/* === Header Wrapper === */
+.header {
+  width: 100%;
+  background: linear-gradient(90deg, var(--teal), var(--aqua), var(--emerald));
+  box-shadow: 0 2px 8px rgba(0, 255, 200, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* === Header Container === */
+.header-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: clamp(0.8rem, 2vw, 1.5rem) clamp(1rem, 3vw, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* === Logo === */
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  color: var(--white);
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* === Navigation === */
+.nav-links {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-links a {
+  font-family: 'Rajdhani', sans-serif;
+  color: var(--white);
+  font-weight: 600;
+  margin: 0 0.8rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f0fdfa;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+/* === Wallet Button === */
+.wallet-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--white);
+  color: var(--teal);
+  border: 2px solid var(--dark);
+  border-radius: 9999px;
+  padding: 0.6rem 1rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.wallet-btn:hover {
+  background: var(--aqua);
+  color: var(--dark);
+}
+
+/* === Mobile Menu === */
+.menu-btn {
+  background: none;
+  border: none;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+.header {
+  background: linear-gradient(90deg, #40e0d0, #20b2aa);
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 128, 128, 0.2);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.active-link {
+  color: #004d4d;
+  border-bottom: 2px solid #004d4d;
+}
+
+.wallet-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #004d4d;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.wallet-btn:hover {
+  background: #006666;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+}
